@@ -1,8 +1,11 @@
 /* eslint-disable */
 
 export default class Entity {
-	constructor(name, data) {
+	constructor(name, count, otherData) {
 		this.name = name;
-		this.data = data;
+		this.data = {
+			count,
+			otherData,
+		};
 	}
 }
