@@ -3,7 +3,7 @@ import Entity from "./Entity";
 
 export default class StarWarsUniverse {
 	constructor() {
-		this._entities = [];
+		this.entities = [];
 	}
 
 	// get _entities() {
@@ -16,7 +16,7 @@ export default class StarWarsUniverse {
 		for (let entityName in entities) {
 			const entityFetch = await fetch(entities[entityName]);
 			const entityData = await entityFetch.json();
-			this._entities.push(new Entity(entityName, entityData));
+			this.entities.push(new Entity(entityName, entityData));
 		}
 	}
 }
