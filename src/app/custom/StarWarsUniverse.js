@@ -16,7 +16,9 @@ export default class StarWarsUniverse {
 		for (let entityName in entities) {
 			const entityFetch = await fetch(entities[entityName]);
 			const entityData = await entityFetch.json();
-			this.entities.push(new Entity(entityName, entityData));
+			// console.log(entityData);
+			this.entities.push(new Entity(entityName, entityData.count, entityData.results));
 		}
+		// console.log(this.entities);
 	}
 }
